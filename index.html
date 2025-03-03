@@ -35,7 +35,7 @@
                 line = line.trim();
                 line = line.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>'); // Bold text
                 line = line.replace(/^###\s*(.*)/, '$1'); // Subheading
-                line = line.replace(/^####\s*(.*)/, '<h3>$1</h3>'); // Subheading
+                line = line.replace(/^####\s*(.*)/, '$1'); // Subheading
                 
                 if (/^##\s/.test(line) || line.length < 50) {
                     subheadingCount++;
