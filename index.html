@@ -34,10 +34,10 @@
             lines.forEach(line => {
                 line = line.trim();
                 line = line.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>'); // Bold text
-                line = line.replace(/^###\s*(.*)/, '$1'); // Subheading
-                line = line.replace(/^####\s*(.*)/, '$1'); // Subheading
+                line = line.replace(/^###\s*(.*)/, '<h2>$1</h2>'); // Subheading
+                line = line.replace(/^####\s*(.*)/, '<h3>$1</h3>'); // Subheading
                 
-                if (/^##\s/.test(line) || line.length < 50) {
+                if (/^##\s/.test(line) || line.length < 1) {
                     subheadingCount++;
 
                     if (subheadingCount === 1) {
