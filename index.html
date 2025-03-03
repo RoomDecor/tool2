@@ -27,14 +27,14 @@
 
             if (lines.length > 0) {
                 let title = lines[0].trim().replace(/\*\*(.*?)\*\*/g, '$1'); // Remove ** from title
-                outputHTML += `<h1>${lines[0].trim()}</h1>\n`;                
+                outputHTML += `<h1>${title}</h1>\n`;                
                 lines.shift();
             }
 
             lines.forEach(line => {
                 line = line.trim();
                 line = line.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>'); // Bold text
-                line = line.replace(/^###\s*(.*)/, '<h2>$1</h2>'); // Subheading
+                line = line.replace(/^###\s*(.*)/, '$1'); // Subheading
                 line = line.replace(/^####\s*(.*)/, '<h3>$1</h3>'); // Subheading
                 
                 if (/^##\s/.test(line) || line.length < 50) {
