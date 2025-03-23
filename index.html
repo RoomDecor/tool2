@@ -34,6 +34,7 @@
             lines.forEach(line => {
                 line = line.trim();
                 line = line.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>'); // Bold text
+                line = line.replace(/^##\s*(.*)/, '$1'); // Subheading
                 line = line.replace(/^###\s*(.*)/, '$1'); // Subheading
                 line = line.replace(/^####\s*(.*)/, '<h3>$1</h3>'); // Subheading level 3
                 
