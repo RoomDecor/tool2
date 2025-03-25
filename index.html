@@ -38,7 +38,7 @@
                 line = line.replace(/^###\s*(.*)/, '$1'); // Subheading
                 line = line.replace(/^####\s*(.*)/, '<h3>$1</h3>'); // Subheading level 3
                 
-                if (/^###\s/.test(line) || line.length < 30) {
+                if (/^###\s/.test(line) || line.length < 50) {
                     subheadingCount++;
 
                     if (subheadingCount === 1) {
